@@ -73,12 +73,19 @@ nav .links button{
     justify-content: space-between;
     margin-bottom: 80px;
 }
-#sidebar>div{
+.sidebar>div{
     background-color: white;
     height: 100%;
     width: 80%;
     padding: 5%;
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 
+}
+.show>div{
+    transform: translateX(0%);  
 }
 #sidebar ul{
     display: flex;
@@ -97,9 +104,9 @@ nav .links button{
 
 
 @media (max-width: 800px){
-    #sidebar{
+    /* #sidebar{
         display: block;
-    }
+    } */
     header{
         position: fixed;
         width: 100%;
